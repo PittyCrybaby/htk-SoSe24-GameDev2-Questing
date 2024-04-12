@@ -2629,7 +2629,7 @@ GameObject:
   - component: {fileID: 198768206}
   - component: {fileID: 198768205}
   m_Layer: 5
-  m_Name: DialogPanel
+  m_Name: StoryView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2674,7 +2674,6 @@ MonoBehaviour:
   speakerName: {fileID: 867016785}
   buttonPrefab: {fileID: 2979589233998023818, guid: be19a274d03044d39882c243a25943be,
     type: 3}
-  questConfig: {fileID: 11400000, guid: d614cd73b29ee448883dc0633c9538b2, type: 2}
 --- !u!114 &198768206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16218,12 +16217,12 @@ PrefabInstance:
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.989224
+      value: 1.9892229
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 47.661167
+      value: 47.66116
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
@@ -16833,12 +16832,12 @@ PrefabInstance:
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.989224
+      value: 1.9892229
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 47.661167
+      value: 47.66116
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
