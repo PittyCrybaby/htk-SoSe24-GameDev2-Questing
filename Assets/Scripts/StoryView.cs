@@ -20,7 +20,7 @@ public class StoryView : MonoBehaviour
 
     private void Awake()
     {
-        DestroyChildren();
+        DestroyOldChoices();
         gameObject.SetActive(false);
     }
 
@@ -30,24 +30,23 @@ public class StoryView : MonoBehaviour
         gameObject.SetActive(true);
         story = new Story(textAsset.text);
 
-        var finishedQuests = GameState.GetFinishedQuests();
-        if (finishedQuests.Any(x => x.GetId() == "computer"))
-        {
-            story.variablesState["finished_computer"] = true;
-        }
-        
-
-
-        if (OnCreateStory != null) OnCreateStory(story);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
 
-        RefreshView();
+        ShowStory();
+    }
+    
+    private void CloseStory()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        gameObject.SetActive(false);
+        FindObjectOfType<PlayerInput>().enabled = true;
     }
 
-    private void RefreshView()
+    private void ShowStory()
     {
-        DestroyChildren();
+        DestroyOldChoices();
 
         // Read all the content until we can't continue any more
         while (story.canContinue)
@@ -58,7 +57,7 @@ public class StoryView : MonoBehaviour
             text = text.Trim();
             // Display the text on screen!
             CreateContentView(text);
-            HandleTags();
+            // HandleTags(); //TODO: tags kommen später
         }
 
         if (story.currentChoices.Count > 0)
@@ -68,19 +67,13 @@ public class StoryView : MonoBehaviour
                 Choice choice = story.currentChoices[i];
                 Button button = CreateChoiceView(choice.text.Trim());
                 // Tell the button what to do when we press it
-                button.onClick.AddListener(delegate { OnClickChoiceButton(choice); });
+                button.onClick.AddListener( () => OnClickChoiceButton(choice));
             }
         }
         else
         {
             Button choice = CreateChoiceView("Continue");
-            choice.onClick.AddListener(() =>
-            {
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
-                gameObject.SetActive(false);
-                FindObjectOfType<PlayerInput>().enabled = true;
-            });
+            choice.onClick.AddListener(CloseStory);
         }
     }
 
@@ -115,7 +108,7 @@ public class StoryView : MonoBehaviour
     private void OnClickChoiceButton(Choice choice)
     {
         story.ChooseChoiceIndex(choice.index);
-        RefreshView();
+        ShowStory();
     }
 
     private void CreateContentView(string text)
@@ -133,6 +126,14 @@ public class StoryView : MonoBehaviour
         }
     }
 
+    private void DestroyOldChoices()
+    {
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+    
     private Button CreateChoiceView(string text)
     {
         var choice = Instantiate(buttonPrefab, choiceHolder.transform, false);
@@ -141,15 +142,5 @@ public class StoryView : MonoBehaviour
         choiceText.text = text;
 
         return choice;
-    }
-
-    private void DestroyChildren()
-    {
-        int childCount = choiceHolder.transform.childCount;
-
-        for (int i = childCount - 1; i >= 0; --i)
-        {
-            Destroy(choiceHolder.transform.GetChild(i).gameObject);
-        }
     }
 }
