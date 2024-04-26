@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.InputSystem.HID;
 using UnityEngine.UI;
 
-{
     public class PauseMenu : MonoBehaviour
     {
         [SerializeField] private GameObject PausePanel;
@@ -32,4 +31,3 @@ using UnityEngine.UI;
             Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
         }
     }
-}

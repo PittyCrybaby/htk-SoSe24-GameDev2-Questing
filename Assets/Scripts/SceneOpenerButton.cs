@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -14,6 +15,7 @@ public class SceneOpenerButton : MonoBehaviour
 
     private void LoadScene()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(buildIndex);
     }
 }

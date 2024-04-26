@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using DefaultNamespace;
 using Ink.Runtime;
@@ -16,6 +17,15 @@ public class StoryView : MonoBehaviour
     [SerializeField] private TextMeshProUGUI storyText;
     [SerializeField] private TextMeshProUGUI speakerName;
     [SerializeField] private Button buttonPrefab;
+    [SerializeField] private List<SpeakerConfigs> speakerConfigs;
+    [SerializeField] private Image speakerImage;
+    
+    [Serializable]
+    public class SpeakerConfigs
+    {
+        public string name;
+        public Sprite sprite;
+    }
     // TODO add later [SerializeField] private QuestsConfig questConfig;
 
     private void Awake()
@@ -118,16 +128,24 @@ public class StoryView : MonoBehaviour
         string[] parts = text.Split(':');
         if (parts.Length >= 2)
         {
-            speakerName.text = parts[0];
-            storyText.text = parts[1];
+            var speaker = parts[0];
+            speakerName.text = speaker;
+            speakerImage.sprite = GetSpeakerImage(speaker);
+            // StartCoroutine(ShowTextLetterByLetter(storyText, parts[1]));
         }
         else
         {
             speakerName.text = string.Empty;
-            storyText.text = text;
+            speakerImage.sprite = null;
+           //  StartCoroutine(ShowTextLetterByLetter(storyText, text));
         }
     }
 
+    private Sprite GetSpeakerImage(string speaker)
+    {
+        return speakerConfigs.FirstOrDefault(s => s.name == speaker)?.sprite;
+    }
+    
     private void DestroyOldChoices()
     {
         foreach (Transform child in choiceHolder)
