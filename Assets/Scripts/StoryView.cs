@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using DefaultNamespace;
@@ -125,25 +126,28 @@ public class StoryView : MonoBehaviour
 
     private void CreateContentView(string text)
     {
-        string[] parts = text.Split(':');
-        if (parts.Length >= 2)
-        {
-            var speaker = parts[0];
-            speakerName.text = speaker;
-            speakerImage.sprite = GetSpeakerImage(speaker);
-            // StartCoroutine(ShowTextLetterByLetter(storyText, parts[1]));
-        }
-        else
-        {
-            speakerName.text = string.Empty;
-            speakerImage.sprite = null;
-           //  StartCoroutine(ShowTextLetterByLetter(storyText, text));
-        }
+        var speaker = story.globalTags.FirstOrDefault(t => t.Contains("speaker"))?.Split(' ')[1];
+        speakerName.text = speaker;
+        speakerImage.sprite = GetSpeakerImage(speaker);
+        StartCoroutine(ShowTextLetterByLetter(text));
     }
 
     private Sprite GetSpeakerImage(string speaker)
     {
         return speakerConfigs.FirstOrDefault(s => s.name == speaker)?.sprite;
+    }
+
+    IEnumerator ShowTextLetterByLetter (string text)
+    {
+        storyText.text = text;
+        storyText.maxVisibleCharacters = 0;
+        for (int i = 0; i <= text.Length; i++)
+        {
+            storyText.maxVisibleCharacters = i;
+            if (Keyboard.current.spaceKey.wasPressedThisFrame) // Support joysticks also
+                yield break;
+        }
+        yield return new WaitForSeconds(0.025f);
     }
     
     private void DestroyOldChoices()
