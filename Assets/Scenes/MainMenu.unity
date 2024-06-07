@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -389,135 +389,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &696276855
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8781643617894971588, guid: 0ff66c0db2e6b4b759c2cf61295ce39d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0ff66c0db2e6b4b759c2cf61295ce39d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 67.41759
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0ff66c0db2e6b4b759c2cf61295ce39d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0ff66c0db2e6b4b759c2cf61295ce39d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 37.79957
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0ff66c0db2e6b4b759c2cf61295ce39d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.70502084
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0ff66c0db2e6b4b759c2cf61295ce39d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.70502084
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0ff66c0db2e6b4b759c2cf61295ce39d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.054273658
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0ff66c0db2e6b4b759c2cf61295ce39d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.054273658
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0ff66c0db2e6b4b759c2cf61295ce39d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0ff66c0db2e6b4b759c2cf61295ce39d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 0ff66c0db2e6b4b759c2cf61295ce39d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 8.804
-      objectReference: {fileID: 0}
-    - target: {fileID: -8504285096728012680, guid: 0ff66c0db2e6b4b759c2cf61295ce39d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8405595132381138371, guid: 0ff66c0db2e6b4b759c2cf61295ce39d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 0ff66c0db2e6b4b759c2cf61295ce39d,
-        type: 3}
-      propertyPath: m_Name
-      value: City_futures
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 0ff66c0db2e6b4b759c2cf61295ce39d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2440950489208175316, guid: 0ff66c0db2e6b4b759c2cf61295ce39d,
-        type: 3}
-      propertyPath: m_Name
-      value: Train
-      objectReference: {fileID: 0}
-    - target: {fileID: 5934833142939937324, guid: 0ff66c0db2e6b4b759c2cf61295ce39d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2440950489208175316, guid: 0ff66c0db2e6b4b759c2cf61295ce39d,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 696276857}
-  m_SourcePrefab: {fileID: 100100000, guid: 0ff66c0db2e6b4b759c2cf61295ce39d, type: 3}
---- !u!1 &696276856 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2440950489208175316, guid: 0ff66c0db2e6b4b759c2cf61295ce39d,
-    type: 3}
-  m_PrefabInstance: {fileID: 696276855}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &696276857
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 696276856}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1152081994cbc461da59eb3acca7949c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1382979480
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,7 +667,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Interstellar Noir
+  m_text: REDD'S TREAD OF FATE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 967b6ddcc3f764c4cbda3c0144ee26e8, type: 2}
   m_sharedMaterial: {fileID: -6186933633342205470, guid: 967b6ddcc3f764c4cbda3c0144ee26e8,
@@ -1317,4 +1188,3 @@ SceneRoots:
   - {fileID: 1382979484}
   - {fileID: 680954082}
   - {fileID: 478309463}
-  - {fileID: 696276855}
