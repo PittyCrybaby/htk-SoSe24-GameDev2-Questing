@@ -13,6 +13,6 @@ public class StoryNpc : MonoBehaviour, IInteractable
             return;
         }
 
-        storyView.StartStory(story);
+        storyView.StartStory(story, null);
     }
 }

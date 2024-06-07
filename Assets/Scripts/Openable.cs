@@ -16,7 +16,7 @@ public class Openable : MonoBehaviour, IInteractable
             return;
         }
 
-        if (GameState.RemoveItem(_requiredItem, _requiredAmount))
+        if (GameState.TryRemoveItem(_requiredItem, _requiredAmount))
         {
             Open();
         }

@@ -9,6 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 858b41307ac984d33aed1caeec7926c2, type: 3}
-  m_Name: Computer
+  m_Script: {fileID: 11500000, guid: 29e716ce0e824a079a6983885cae0844, type: 3}
+  m_Name: MissingBracelet
   m_EditorClassIdentifier: 
+  displayName: 
+  requirements:
+  - type: {fileID: 11400000, guid: 87b641c553af20647bbbbbcda2120063, type: 2}
+    amount: 1

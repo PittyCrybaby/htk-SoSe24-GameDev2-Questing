@@ -12,25 +12,7 @@ public class Collectable : MonoBehaviour, IInteractable
         
         GameState.AddItem(type, amount);
 
-        UpdateQuests();
         Destroy(gameObject);
     }
-
-    private void UpdateQuests()
-    {
-        var activeQuests = GameState.GetActiveQuests();
-        foreach (var quest in activeQuests)
-        {
-            if (quest is CollectionQuest collectionQuest && collectionQuest.type == type)
-            {
-                if (GameState.GetAllItems().TryGetValue(type, out var itemAmount))
-                {
-                    if (itemAmount >= collectionQuest.amount)
-                    {
-                        GameState.FinishQuest(collectionQuest);
-                    }
-                }
-            }
-        }
-    }
+    
 }

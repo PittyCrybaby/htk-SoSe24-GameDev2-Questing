@@ -1,4 +1,4 @@
-﻿VAR finished_computer = false
+VAR finished_computer = false
 
 Slim: There was an accident.
 

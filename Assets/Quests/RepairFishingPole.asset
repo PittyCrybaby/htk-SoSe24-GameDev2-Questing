@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29e716ce0e824a079a6983885cae0844, type: 3}
+  m_Name: RepairFishingPole
+  m_EditorClassIdentifier: 
+  displayName: 
+  requirements:
+  - type: {fileID: 11400000, guid: ad205f80bef82844bb2b3159bc9bb7fc, type: 2}
+    amount: 1
+  - type: {fileID: 11400000, guid: fc8f07317a80ade4fbacc38073fb166f, type: 2}
+    amount: 3
+  - type: {fileID: 11400000, guid: 8b925b5fa75129d40ba44aee63d625c1, type: 2}
+    amount: 1
+  - type: {fileID: 11400000, guid: 16035f40bf734144296e390b27d99c3e, type: 2}
+    amount: 1
