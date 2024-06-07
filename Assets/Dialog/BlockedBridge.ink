@@ -1,6 +1,7 @@
 VAR finished_blockedbridge = false
 # speaker Yonder
-Yonder: Hey Redd, you look troubled.
+
+Hey Redd, you look troubled.
 Redd: Yonder, I'm glad you're home. 
 Yes, I was looking for you actually.
 The bridge into the forest is blocked by a fallen tree, could you help me remove it?
@@ -18,7 +19,7 @@ sadly my axe broke last time I used it.
  
  
  === FinishQuest
- # removeQuest BLockedBridge
+ # removeQuest BlockedBridge
  You did it!
 -> END
  

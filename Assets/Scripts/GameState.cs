@@ -69,6 +69,8 @@ public class GameState : MonoBehaviour
             Status = QuestStatus.Started,
         };
         instance._questStates.Add(state);
+        Debug.Log("Quest" + quest.GetId());
+        QuestSystem.UpdateQuests();
     }
 
     public static void RemoveQuest(string questId)
@@ -76,6 +78,7 @@ public class GameState : MonoBehaviour
         var instance = FindObjectOfType<GameState>();
         var match = instance._questStates.Find(q => q.Quest.GetId() == questId);
         instance._questStates.Remove(match);
+        Debug.Log("Quest" + questId + "removed");
     }
 
     public static void MarkQuestCompletable(IQuest quest)
@@ -87,6 +90,7 @@ public class GameState : MonoBehaviour
         if (index >= 0 && index < instance._questStates.Count)
         {
             instance._questStates[index] = match;
+            Debug.Log(quest.GetId() + "is now completed");
         }
     }
     
