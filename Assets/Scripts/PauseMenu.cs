@@ -14,7 +14,7 @@ using UnityEngine.UI;
             ContinueButton.onClick.AddListener(() => SetPausedStatus(false));
         }
 
-        private void OnMouseUpAsButton()
+        private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
