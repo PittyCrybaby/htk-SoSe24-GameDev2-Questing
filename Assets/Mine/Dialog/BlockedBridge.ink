@@ -14,12 +14,12 @@ sadly my axe broke last time I used it.
  
  === GiveQuest
  # addQuest BlockedBridge
- Here's your quest
+ Bring me 2 Branches and 4 rocks
  -> END
  
  
  === FinishQuest
  # removeQuest BlockedBridge
- You did it!
+ Thank you! Now I can repair my axe.
 -> END
  
