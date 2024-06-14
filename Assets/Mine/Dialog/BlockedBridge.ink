@@ -7,9 +7,9 @@ Yes, I was looking for you actually.
 The bridge into the forest is blocked by a fallen tree, could you help me remove it?
 Yonder: Oh, I'd love to help but...
 sadly my axe broke last time I used it.
-* Give me the quest
+* I can help
  -> GiveQuest
- * {finished_blockedbridge} I finished
+ * {finished_blockedbridge} Here you go!
     -> FinishQuest
  
  === GiveQuest
