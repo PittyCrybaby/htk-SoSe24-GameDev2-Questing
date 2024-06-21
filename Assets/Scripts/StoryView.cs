@@ -124,6 +124,13 @@ public class StoryView : MonoBehaviour
                 GameState.RemoveQuest(questName);
                 FindObjectOfType<QuestLogView>(true).ShowActiveQuests();
             }
+
+            if (currentTag.Contains("completeQuest"))
+            {
+                var questName = currentTag.Split(' ')[1];
+                GameState.CompleteQuest(questName);
+                FindObjectOfType<QuestLogView>(true).ShowActiveQuests();
+            }
         }
     }
 
