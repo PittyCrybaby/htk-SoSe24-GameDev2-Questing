@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29e716ce0e824a079a6983885cae0844, type: 3}
   m_Name: MissingBracelet
   m_EditorClassIdentifier: 
-  displayName: 
+  displayName: MissingBracelet
   requirements:
   - type: {fileID: 11400000, guid: 87b641c553af20647bbbbbcda2120063, type: 2}
     amount: 1
+  isHidden: 0

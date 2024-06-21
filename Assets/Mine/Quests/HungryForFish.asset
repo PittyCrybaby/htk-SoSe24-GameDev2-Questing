@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29e716ce0e824a079a6983885cae0844, type: 3}
   m_Name: HungryForFish
   m_EditorClassIdentifier: 
-  displayName: 
+  displayName: Hungry For Fish
   requirements:
   - type: {fileID: 11400000, guid: 16035f40bf734144296e390b27d99c3e, type: 2}
     amount: 1
+  isHidden: 0

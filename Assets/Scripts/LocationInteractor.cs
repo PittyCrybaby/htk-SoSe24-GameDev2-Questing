@@ -1,8 +1,9 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class LocationInteractor : MonoBehaviour
 {
-    private IInteractable currentInteractable;
+    [CanBeNull] private IInteractable currentInteractable;
     
     private void Update()
     {
