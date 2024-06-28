@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace DefaultNamespace
 {
     public interface IQuest
@@ -5,5 +7,6 @@ namespace DefaultNamespace
         public string GetId();
         public bool IsHidden();
         string GetDisplayName();
+        GameObject GetCompleteScreenPrefab();
     }
 }

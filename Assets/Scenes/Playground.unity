@@ -7732,6 +7732,7 @@ GameObject:
   - component: {fileID: 1284275106}
   - component: {fileID: 1284275105}
   - component: {fileID: 1284275109}
+  - component: {fileID: 1284275110}
   m_Layer: 5
   m_Name: InGameCanvas
   m_TagString: Untagged
@@ -7838,6 +7839,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PausePanel: {fileID: 1207122292}
   ContinueButton: {fileID: 1876173578}
+--- !u!114 &1284275110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284275104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 678fdd92e356c8c408013269e0fe0489, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1294350674 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3356241712217292905, guid: 53acd324664e3ef40a7faa929a79f7a9,

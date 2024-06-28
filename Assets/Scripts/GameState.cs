@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using DefaultNamespace;
 using UnityEngine;
 
@@ -92,6 +93,13 @@ public class GameState : MonoBehaviour
             instance._questStates[index] = match;
         }
         Debug.Log(("Quest" + questId + "completed"));
+        
+        var uiPrefab = match.Quest.GetCompleteScreenPrefab();
+        if (uiPrefab != null)
+        {
+            var root = FindObjectOfType<UIRoot>().transform;
+            Instantiate(uiPrefab, root);
+        }
     }
 
     public static void MarkQuestCompletable(IQuest quest)
