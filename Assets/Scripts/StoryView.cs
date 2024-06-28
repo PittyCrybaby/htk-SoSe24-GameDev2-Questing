@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using DefaultNamespace;
-// using DG.Tweening;
+using DG.Tweening;
 using Ink.Runtime;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -17,13 +18,13 @@ public class StoryView : MonoBehaviour
     [SerializeField] private TextMeshProUGUI storyText;
     [SerializeField] private TextMeshProUGUI speakerName;
     [SerializeField] private Button buttonPrefab;
-    [SerializeField] private QuestsConfig questConfig;
     [SerializeField] private GameObject normalHudGroup;
     [SerializeField] private Image speakerImage;
     
     [SerializeField] private List<SpeakerConfig> speakerConfigs;
 
     private UnityAction _onFinished;
+    private List<IQuest> _quests;
 
     [Serializable]
     public class SpeakerConfig
@@ -38,6 +39,13 @@ public class StoryView : MonoBehaviour
     {
         DestroyOldChoices();
         gameObject.SetActive(false);
+
+        CollectionQuest[] collectionQuests = Resources.LoadAll<CollectionQuest>("Quests");
+        _quests = new List<IQuest>();
+        foreach (var collectionQuest in collectionQuests)
+        {
+            _quests.Add(collectionQuest);
+        }
     }
 
     public void StartStory(TextAsset textAsset, UnityAction onFinished)
@@ -53,7 +61,29 @@ public class StoryView : MonoBehaviour
 
         foreach (var quest in GameState.GetCompletableQuests())
         {
-            story.variablesState["finished_"+quest.Quest.GetId().ToLower()] = true;
+            var varName = "completable_" + quest.Quest.GetId().ToLower();
+            if (story.variablesState.Contains(varName))
+            {
+                story.variablesState[varName] = true;
+            }
+        }
+        
+        foreach (var quest in GameState.GetCompletedQuests())
+        {
+            var varName = "completed_" + quest.Quest.GetId().ToLower();
+            if (story.variablesState.Contains(varName))
+            {
+                story.variablesState[varName] = true;
+            }
+        }
+        
+        foreach (var quest in GameState.GetActiveQuests())
+        {
+            var varName = "active_" + quest.Quest.GetId().ToLower();
+            if (story.variablesState.Contains(varName))
+            {
+                story.variablesState[varName] = true;
+            }
         }
         
         ShowStory();
@@ -113,7 +143,7 @@ public class StoryView : MonoBehaviour
             if (currentTag.Contains("addQuest"))
             {
                 var questName = currentTag.Split(' ')[1];
-                var quest = questConfig.quests.First(q => q.GetId() == questName);
+                var quest = _quests.First(q => q.GetId() == questName);
                 GameState.StartQuest(quest);
                 FindObjectOfType<QuestLogView>(true).ShowActiveQuests();
             }
@@ -124,7 +154,7 @@ public class StoryView : MonoBehaviour
                 GameState.RemoveQuest(questName);
                 FindObjectOfType<QuestLogView>(true).ShowActiveQuests();
             }
-
+            
             if (currentTag.Contains("completeQuest"))
             {
                 var questName = currentTag.Split(' ')[1];
@@ -160,7 +190,7 @@ public class StoryView : MonoBehaviour
                 storyText.maxVisibleCharacters = text.Length;
                 yield break;
             }
-            yield return new WaitForSeconds(0.02f); // wir könnten auch 1 sekunde warten, das wäre sehr langsam
+            yield return new WaitForSeconds(0.015f); // wir könnten auch 1 sekunde warten, das wäre sehr langsam
         }
     }
     
@@ -184,7 +214,7 @@ public class StoryView : MonoBehaviour
         {
             choice.Select();
         }
-       // choice.transform.DOScale(1f, 0.5f).SetEase(Ease.OutBounce).From(0f).SetDelay(index * 0.2f);
+        choice.transform.DOScale(1f, 0.5f).SetEase(Ease.OutBounce).From(0f).SetDelay(index * 0.2f);
 
         var choiceText = choice.GetComponentInChildren<TextMeshProUGUI>();
         choiceText.text = text;
