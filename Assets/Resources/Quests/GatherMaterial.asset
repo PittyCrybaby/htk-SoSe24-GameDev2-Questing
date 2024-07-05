@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: GatherMaterial
   m_EditorClassIdentifier: 
   displayName: 
-  requirements: []
+  requirements:
+  - type: {fileID: 11400000, guid: fc8f07317a80ade4fbacc38073fb166f, type: 2}
+    amount: 5
+  - type: {fileID: 11400000, guid: 1a05f009c5cbf0f43988730faf0bf34c, type: 2}
+    amount: 4
   isHidden: 0
   completeScreenPrefab: {fileID: 0}

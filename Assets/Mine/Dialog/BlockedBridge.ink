@@ -44,7 +44,7 @@ Alright! I'll be back soon!
 -> END
 
 === HandOverMaterial ===
-# removeQuest BlockedBridge
+# removeQuest GatherMaterial
 # speaker: Yonder
-"Alright, I already assessed the situation as well, let me just take care of the axe and then the tree~"
+"Alright, I already assessed the situation as well, let me just take care of the axe and the tree is as good as gone!"
 -> END
