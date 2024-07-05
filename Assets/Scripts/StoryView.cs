@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using DefaultNamespace;
-using DG.Tweening;
+//using DG.Tweening;
 using Ink.Runtime;
 using TMPro;
 using Unity.VisualScripting;
@@ -214,7 +214,7 @@ public class StoryView : MonoBehaviour
         {
             choice.Select();
         }
-        choice.transform.DOScale(1f, 0.5f).SetEase(Ease.OutBounce).From(0f).SetDelay(index * 0.2f);
+        //choice.transform.DOScale(1f, 0.5f).SetEase(Ease.OutBounce).From(0f).SetDelay(index * 0.2f);
 
         var choiceText = choice.GetComponentInChildren<TextMeshProUGUI>();
         choiceText.text = text;

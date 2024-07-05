@@ -1,33 +1,47 @@
-﻿using System;
+﻿using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem.HID;
 using UnityEngine.UI;
 
-    public class PauseMenu : MonoBehaviour
+public class PauseMenu : MonoBehaviour
+{
+    [SerializeField] private Button continueButton;
+    [SerializeField] private Button optionsButton;
+    [SerializeField] private OptionsMenu optionsMenuPrefab;
+    
+    private void Awake()
     {
-        [SerializeField] private GameObject PausePanel;
-        [SerializeField] private Button ContinueButton;
+        Pause();
+        continueButton.onClick.AddListener(Continue);
+        optionsButton.onClick.AddListener(OpenOptions);
+        continueButton.Select();
+    }
 
-        private void Awake()
+    private void Update()
+    {
+        if (Input.GetButtonDown("Menu"))
         {
-            PausePanel.SetActive(false);
-            ContinueButton.onClick.AddListener(() => SetPausedStatus(false));
-        }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                var wasPreviouslyPaused = PausePanel.activeSelf;
-                SetPausedStatus(!wasPreviouslyPaused);
-            }
-        }
-        
-        private void SetPausedStatus(bool isPaused)
-        {
-            PausePanel.SetActive(isPaused);
-            Time.timeScale = isPaused ? 0 : 1;
-            Cursor.visible = isPaused;
-            Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
+            Continue();
         }
     }
+
+    private void Pause()
+    {
+        Time.timeScale = 0;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    private void Continue()
+    {
+        Time.timeScale = 1;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Destroy(gameObject);
+    }
+    
+    private void OpenOptions()
+    {
+        UIService.Open(optionsMenuPrefab.gameObject);
+        Destroy(gameObject);
+    }
+}

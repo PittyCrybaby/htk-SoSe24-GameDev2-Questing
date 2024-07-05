@@ -1,25 +1,50 @@
-VAR finished_blockedbridge = false
-# speaker Yonder
+# removeQuest TalkToYonder
+VAR completable_BlockedBridge = false
+VAR completable_GatherMaterial = false
 
-Hey Redd, you look troubled.
-Redd: Yonder, I'm glad you're home. 
-Yes, I was looking for you actually.
-The bridge into the forest is blocked by a fallen tree, could you help me remove it?
-Yonder: Oh, I'd love to help but...
-sadly my axe broke last time I used it.
-* I can help
- -> GiveQuest
- * {finished_blockedbridge} Here you go!
-    -> FinishQuest
- 
- === GiveQuest
- # addQuest BlockedBridge
- Bring me 2 Branches and 4 rocks
- -> END
- 
- 
- === FinishQuest
- # removeQuest BlockedBridge
- Thank you! Now I can repair my axe.
+# speaker: Redd
+Hello Yonder!
+
+# speaker: Yonder
+Oh, hey there lil' Redd! How are you? You look a little distraught.
+
+# speaker: Redd
+Well, I kind of am...
+I think I forgot my bracelet in the mountains but I can't get there!
+
+# speaker: Yonder
+Oh? How come?
+
+# speaker: Redd
+There's a big tree in the way of the bridge, I thought you could help me remove it?
+
+# speaker: Yonder
+I would... but sadly my axe got damaged on my last trip to the woods
+I'd need new material to patch it up first...
+AND I need to assess the situation of the tree and the best way to move chop it down.
+
+* "Help with material?"
+-> HelpWithMaterial
+* {completable_GatherMaterial} "I gathered the material!"
+-> HandOverMaterial
+
+=== HelpWithMaterial ===
+#addQuest GatherMaterial
+# speaker: Redd
+Oh, if it's materials you need, I could help get them.
+
+# speaker: Yonder
+You'd do that for me? Thank you!
+I need 5 sticks and 4 stones in total to repair it.
+You can find them deeper in the woods."
+
+# speaker: Redd
+Alright! I'll be back soon!
+
 -> END
- 
+
+=== HandOverMaterial ===
+# removeQuest BlockedBridge
+# speaker: Yonder
+"Alright, I already assessed the situation as well, let me just take care of the axe and then the tree~"
+-> END
