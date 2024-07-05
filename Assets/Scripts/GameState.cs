@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
 using DefaultNamespace;
 using UnityEngine;
 
@@ -11,17 +10,27 @@ public class GameState : MonoBehaviour
 
     public static void AddItem(ItemType type, uint amount)
     {
+        if (amount == 0 || type == null)
+        {
+            return;
+        }
+
         var instance = FindObjectOfType<GameState>();
         if (!instance._items.TryAdd(type, amount))
         {
             instance._items[type] += amount;
         }
-        
-        QuestSystem.UpdateQuests(); // TODO with class
+
+        QuestSystem.UpdateQuests();
     }
 
     public static bool TryRemoveItem(ItemType type, uint amount)
     {
+        if (amount == 0 || type == null)
+        {
+            return true;
+        }
+
         var instance = FindObjectOfType<GameState>();
         if (instance._items.TryGetValue(type, out var ownedAmount))
         {
@@ -39,6 +48,11 @@ public class GameState : MonoBehaviour
 
     public static bool HasEnoughItems(ItemType type, uint amount)
     {
+        if (amount == 0 || type == null)
+        {
+            return true;
+        }
+
         var instance = FindObjectOfType<GameState>();
         if (instance._items.TryGetValue(type, out var ownedAmount))
         {
@@ -57,20 +71,20 @@ public class GameState : MonoBehaviour
     public static void StartQuest(IQuest quest)
     {
         var instance = FindObjectOfType<GameState>();
-        
+
         if (instance._questStates.Any(q => q.Quest.GetId() == quest.GetId()))
         {
             Debug.LogWarning($"Quest{quest.GetId()} already started - not starting it again");
             return;
         }
-        
+
         var state = new QuestState()
         {
             Quest = quest,
             Status = QuestStatus.Started,
         };
         instance._questStates.Add(state);
-        Debug.Log("Quest" + quest.GetId());
+        Debug.Log("Quest " + quest.GetId() + " started");
         QuestSystem.UpdateQuests();
     }
 
@@ -79,7 +93,7 @@ public class GameState : MonoBehaviour
         var instance = FindObjectOfType<GameState>();
         var match = instance._questStates.Find(q => q.Quest.GetId() == questId);
         instance._questStates.Remove(match);
-        Debug.Log("Quest" + questId + "removed");
+        Debug.Log("Quest " + questId + " removed");
     }
 
     public static void CompleteQuest(string questId)
@@ -92,14 +106,15 @@ public class GameState : MonoBehaviour
         {
             instance._questStates[index] = match;
         }
-        Debug.Log(("Quest" + questId + "completed"));
-        
+
         var uiPrefab = match.Quest.GetCompleteScreenPrefab();
         if (uiPrefab != null)
         {
             var root = FindObjectOfType<UIRoot>().transform;
             Instantiate(uiPrefab, root);
         }
+
+        Debug.Log("Quest " + questId + " completed");
     }
 
     public static void MarkQuestCompletable(IQuest quest)
@@ -111,10 +126,10 @@ public class GameState : MonoBehaviour
         if (index >= 0 && index < instance._questStates.Count)
         {
             instance._questStates[index] = match;
-            Debug.Log(quest.GetId() + "is now completed");
+            Debug.Log(quest.GetId() + " is now completable");
         }
     }
-    
+
     public static IReadOnlyList<QuestState> GetCompletableQuests()
     {
         var instance = FindObjectOfType<GameState>();
@@ -132,17 +147,17 @@ public class GameState : MonoBehaviour
         var instance = FindObjectOfType<GameState>();
         return instance._questStates;
     }
-    
+
     public struct QuestState
     {
         public IQuest Quest;
         public QuestStatus Status;
     };
-    
+
     public enum QuestStatus
     {
-        Started,
-        Completable,
-        Completed
+        Started = 0,
+        Completable = 1,
+        Completed = 2
     }
 }
