@@ -844,7 +844,7 @@ MonoBehaviour:
     emotion: Sad
   - name: Yonder
     sprite: {fileID: 21300000, guid: adaa85eeeebe05a4888ceb136cfcf969, type: 3}
-    emotion: 
+    emotion: Happy
   - name: Dante
     sprite: {fileID: 21300000, guid: adaa85eeeebe05a4888ceb136cfcf969, type: 3}
     emotion: 
