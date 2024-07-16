@@ -29,6 +29,7 @@ public class StoryView : MonoBehaviour
     {
         public string name;
         public Sprite sprite;
+        public string emotion;
     }
 
     private Story story;
@@ -166,8 +167,9 @@ public class StoryView : MonoBehaviour
             if (currentTag.Contains("speaker"))
             {
                 var speaker = currentTag.Split(' ')[1];
+                var emotion = currentTag.Split(' ')[2];
                 speakerName.text = speaker; 
-                speakerImage.sprite = GetSpeakerImage(speaker);
+                speakerImage.sprite = GetSpeakerImage(speaker, emotion);
             }
         }
     }
@@ -183,8 +185,9 @@ public class StoryView : MonoBehaviour
         if (story.globalTags != null)
         {
             var speaker = story.globalTags.FirstOrDefault(t => t.Contains("speaker"))?.Split(' ')[1];
+            var speakerEmotion =  story.globalTags.FirstOrDefault(t => t.Contains("speaker"))?.Split(' ')[2];
             speakerName.text = speaker; 
-            speakerImage.sprite = GetSpeakerImage(speaker);
+            speakerImage.sprite = GetSpeakerImage(speaker, speakerEmotion);
         }
         StartCoroutine(ShowTextLetterByLetter(text));
     }
@@ -206,9 +209,9 @@ public class StoryView : MonoBehaviour
         }
     }
 
-    private Sprite GetSpeakerImage(string speaker)
+    private Sprite GetSpeakerImage(string speaker, string emotion)
     {
-        return speakerConfigs.FirstOrDefault(s => s.name == speaker)?.sprite;
+        return speakerConfigs.FirstOrDefault(s => s.name == speaker && string.Equals(s.emotion.ToLower(), emotion.ToLower()))?.sprite;
     }
 
     private void DestroyOldChoices()

@@ -841,10 +841,13 @@ MonoBehaviour:
   speakerConfigs:
   - name: Redd
     sprite: {fileID: 21300000, guid: adaa85eeeebe05a4888ceb136cfcf969, type: 3}
+    emotion: Sad
   - name: Yonder
     sprite: {fileID: 21300000, guid: adaa85eeeebe05a4888ceb136cfcf969, type: 3}
+    emotion: 
   - name: Dante
     sprite: {fileID: 21300000, guid: adaa85eeeebe05a4888ceb136cfcf969, type: 3}
+    emotion: 
 --- !u!114 &198768206
 MonoBehaviour:
   m_ObjectHideFlags: 0
