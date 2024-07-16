@@ -975,6 +975,7 @@ GameObject:
   - component: {fileID: 247044015}
   - component: {fileID: 247044014}
   - component: {fileID: 247044013}
+  - component: {fileID: 247044017}
   m_Layer: 0
   m_Name: Stone (2)
   m_TagString: Untagged
@@ -1082,6 +1083,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247044011}
   m_Mesh: {fileID: 4013275331872712965, guid: 80dfff0c44752614bbdab2d77bdd2d3c, type: 3}
+--- !u!114 &247044017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247044011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &253557946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1541,6 +1560,7 @@ GameObject:
   - component: {fileID: 304695652}
   - component: {fileID: 304695651}
   - component: {fileID: 304695650}
+  - component: {fileID: 304695654}
   m_Layer: 0
   m_Name: Stone (1)
   m_TagString: Untagged
@@ -1648,6 +1668,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304695648}
   m_Mesh: {fileID: 4013275331872712965, guid: 80dfff0c44752614bbdab2d77bdd2d3c, type: 3}
+--- !u!114 &304695654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304695648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &306873662
 GameObject:
   m_ObjectHideFlags: 0
@@ -3208,6 +3246,7 @@ GameObject:
   - component: {fileID: 812196465}
   - component: {fileID: 812196464}
   - component: {fileID: 812196463}
+  - component: {fileID: 812196467}
   m_Layer: 0
   m_Name: Stone (3)
   m_TagString: Untagged
@@ -3315,6 +3354,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812196461}
   m_Mesh: {fileID: 4013275331872712965, guid: 80dfff0c44752614bbdab2d77bdd2d3c, type: 3}
+--- !u!114 &812196467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812196461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &824447390
 GameObject:
   m_ObjectHideFlags: 0
@@ -3422,6 +3479,7 @@ GameObject:
   - component: {fileID: 844219321}
   - component: {fileID: 844219319}
   - component: {fileID: 844219324}
+  - component: {fileID: 844219325}
   m_Layer: 0
   m_Name: Wood
   m_TagString: Untagged
@@ -3531,6 +3589,24 @@ CapsuleCollider:
   m_Height: 0.9055795
   m_Direction: 1
   m_Center: {x: 0.06068984, y: 0.10736505, z: 0.0479751}
+--- !u!114 &844219325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844219318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &850789334
 GameObject:
   m_ObjectHideFlags: 0
@@ -4419,6 +4495,7 @@ GameObject:
   - component: {fileID: 945460246}
   - component: {fileID: 945460244}
   - component: {fileID: 945460249}
+  - component: {fileID: 945460250}
   m_Layer: 0
   m_Name: Wood (1)
   m_TagString: Untagged
@@ -4528,6 +4605,24 @@ CapsuleCollider:
   m_Height: 0.9055797
   m_Direction: 1
   m_Center: {x: 0.060705107, y: 0.10730404, z: 0.04796367}
+--- !u!114 &945460250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945460243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &947647443
 GameObject:
   m_ObjectHideFlags: 0
@@ -4541,6 +4636,7 @@ GameObject:
   - component: {fileID: 947647446}
   - component: {fileID: 947647445}
   - component: {fileID: 947647444}
+  - component: {fileID: 947647449}
   m_Layer: 0
   m_Name: Stone
   m_TagString: Untagged
@@ -4648,6 +4744,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 801473609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &947647449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947647443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &955821911
 GameObject:
   m_ObjectHideFlags: 0
@@ -10906,6 +11020,7 @@ GameObject:
   - component: {fileID: 1895331641}
   - component: {fileID: 1895331640}
   - component: {fileID: 1895331639}
+  - component: {fileID: 1895331643}
   m_Layer: 0
   m_Name: Bracelet
   m_TagString: Untagged
@@ -11013,6 +11128,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895331637}
   m_Mesh: {fileID: 4013275331872712965, guid: 80dfff0c44752614bbdab2d77bdd2d3c, type: 3}
+--- !u!114 &1895331643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895331637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1913369955
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 858b41307ac984d33aed1caeec7926c2, type: 3}
-  m_Name: Yonder
+  m_Script: {fileID: 11500000, guid: 29e716ce0e824a079a6983885cae0844, type: 3}
+  m_Name: CollectFish
   m_EditorClassIdentifier: 
+  displayName: 
+  requirements: []
+  isHidden: 0
+  completeScreenPrefab: {fileID: 0}

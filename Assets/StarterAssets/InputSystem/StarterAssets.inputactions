@@ -42,7 +42,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Interaction",
+                    "name": "Interact",
                     "type": "Button",
                     "id": "9d8c6723-0de1-4f9e-87e9-a89574790fd8",
                     "expectedControlType": "Button",
@@ -230,12 +230,12 @@
                 },
                 {
                     "name": "",
-                    "id": "d3a1679a-0351-4c17-a83d-88e156093915",
-                    "path": "e",
+                    "id": "048101a0-967e-4ea4-8add-ffcda98f48e1",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouse",
-                    "action": "Interaction",
+                    "groups": "",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -1,15 +1,23 @@
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class LocationInteractor : MonoBehaviour
 {
-    [CanBeNull] private IInteractable currentInteractable;
-    
+    [CanBeNull] private IInteractable _currentInteractable;
+    private PlayerInput _playerInput;
+
+    private void Awake()
+    {
+        _playerInput = FindObjectOfType<PlayerInput>();
+    }
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (_playerInput.actions["Interact"].WasPressedThisFrame())
         {
-            currentInteractable?.Interact();
+            _currentInteractable?.Interact();
         }
     }
 
@@ -17,18 +25,28 @@ public class LocationInteractor : MonoBehaviour
     {
         if (other.TryGetComponent<IInteractable>(out var interactable))
         {
-            currentInteractable = interactable;
+            _currentInteractable = interactable;
+        }
+        
+        if (other.TryGetComponent<Outline>(out var outline))
+        {
+            outline.enabled = true;
         }
     }
-
+    
     private void OnTriggerExit(Collider other)
     {
         if (other.TryGetComponent<IInteractable>(out var interactable))
         {
-            if (currentInteractable == interactable)
+            if (_currentInteractable == interactable)
             {
-                currentInteractable = null;
+                _currentInteractable = null;
             }
+        }
+        
+        if (other.TryGetComponent<Outline>(out var outline))
+        {
+            outline.enabled = false;
         }
     }
 }

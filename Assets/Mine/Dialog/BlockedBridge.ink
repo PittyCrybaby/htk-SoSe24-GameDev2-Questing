@@ -25,8 +25,9 @@ AND I need to assess the situation of the tree and the best way to move chop it 
 
 * "Help with material?"
 -> HelpWithMaterial
-* {completable_GatherMaterial} "I gathered the material!"
+
 -> HandOverMaterial
+* {completable_GatherMaterial} {completable_BlockedBridge} "I gathered the material!"
 
 === HelpWithMaterial ===
 #addQuest GatherMaterial

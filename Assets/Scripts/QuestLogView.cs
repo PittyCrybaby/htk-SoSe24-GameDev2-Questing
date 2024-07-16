@@ -1,9 +1,17 @@
 using UnityEngine;
 
+/// <summary>
+/// Show a list of active quests in the UI
+/// </summary>
 public class QuestLogView : MonoBehaviour
 {
     [SerializeField] private RectTransform questsHolder;
     [SerializeField] private QuestStatusView questViewPrefab;
+
+    private void Awake()
+    {
+        ShowActiveQuests();
+    }
 
     public void ShowActiveQuests()
     {
@@ -15,6 +23,13 @@ public class QuestLogView : MonoBehaviour
 
         // create + show the current quests
         var activeQuests = GameState.GetActiveQuests();
+        if (activeQuests.Count == 0)
+        {
+            gameObject.SetActive(false);
+            return;
+        }
+        
+        gameObject.SetActive(true);
         foreach (var quest in activeQuests)
         {
             if (quest.Status == GameState.QuestStatus.Completed)
