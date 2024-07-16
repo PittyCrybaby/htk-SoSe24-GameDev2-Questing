@@ -1,35 +1,30 @@
 # removeQuest TalkToYonder
 VAR completable_BlockedBridge = false
 VAR completable_GatherMaterial = false
+->Hello
+===Hello
+Hello Yonder!# speaker: Redd Sad
+    *[Continue]
+        Oh, hey there lil' Redd! How are you? You look a little distraught.# speaker: Yonder
+        **[Continue]
+            Well, I kind of am...
+            I think I forgot my bracelet in the mountains but I can't get there!# speaker: Redd
+            ***[Continue]
+                Oh? How come?# speaker: Yonder
+                ****[Continue]
+                    There's a big tree in the way of the bridge, I thought you could help me remove it?# speaker: Redd
+                    *****[Continue]
+                        I would... but sadly my axe got damaged on my last trip to the woods
+                        I'd need new material to patch it up first...
+                        AND I need to assess the situation of the tree and the best way to move chop it down.# speaker: Yonder
+                            ****** "Help with material?"
+                                -> HelpWithMaterial
+                            
+                            
+                            ****** {completable_GatherMaterial} {completable_BlockedBridge} "I gathered the material!"
+                                -> HandOverMaterial
 
-# speaker: Redd
-Hello Yonder!
-
-# speaker: Yonder
-Oh, hey there lil' Redd! How are you? You look a little distraught.
-
-# speaker: Redd
-Well, I kind of am...
-I think I forgot my bracelet in the mountains but I can't get there!
-
-# speaker: Yonder
-Oh? How come?
-
-# speaker: Redd
-There's a big tree in the way of the bridge, I thought you could help me remove it?
-
-# speaker: Yonder
-I would... but sadly my axe got damaged on my last trip to the woods
-I'd need new material to patch it up first...
-AND I need to assess the situation of the tree and the best way to move chop it down.
-
-* "Help with material?"
--> HelpWithMaterial
-
--> HandOverMaterial
-* {completable_GatherMaterial} {completable_BlockedBridge} "I gathered the material!"
-
-=== HelpWithMaterial ===
+=== HelpWithMaterial
 #addQuest GatherMaterial
 # speaker: Redd
 Oh, if it's materials you need, I could help get them.
@@ -44,7 +39,7 @@ Alright! I'll be back soon!
 
 -> END
 
-=== HandOverMaterial ===
+=== HandOverMaterial
 # removeQuest GatherMaterial
 # speaker: Yonder
 "Alright, I already assessed the situation as well, let me just take care of the axe and the tree is as good as gone!"

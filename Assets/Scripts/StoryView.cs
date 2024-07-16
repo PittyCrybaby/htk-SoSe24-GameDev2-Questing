@@ -162,6 +162,13 @@ public class StoryView : MonoBehaviour
                 GameState.CompleteQuest(questName);
                 FindObjectOfType<QuestLogView>(true).ShowActiveQuests();
             }
+            
+            if (currentTag.Contains("speaker"))
+            {
+                var speaker = currentTag.Split(' ')[1];
+                speakerName.text = speaker; 
+                speakerImage.sprite = GetSpeakerImage(speaker);
+            }
         }
     }
 
@@ -173,9 +180,12 @@ public class StoryView : MonoBehaviour
 
     private void CreateContentView(string text)
     {
-        var speaker = story.globalTags.FirstOrDefault(t => t.Contains("speaker"))?.Split(' ')[1];
-        speakerName.text = speaker;
-        speakerImage.sprite = GetSpeakerImage(speaker);
+        if (story.globalTags != null)
+        {
+            var speaker = story.globalTags.FirstOrDefault(t => t.Contains("speaker"))?.Split(' ')[1];
+            speakerName.text = speaker; 
+            speakerImage.sprite = GetSpeakerImage(speaker);
+        }
         StartCoroutine(ShowTextLetterByLetter(text));
     }
 
