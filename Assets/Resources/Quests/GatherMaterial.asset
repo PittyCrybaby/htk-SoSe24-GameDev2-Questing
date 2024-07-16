@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29e716ce0e824a079a6983885cae0844, type: 3}
   m_Name: GatherMaterial
   m_EditorClassIdentifier: 
-  displayName: 
+  displayName: Gather Material
   requirements:
   - type: {fileID: 11400000, guid: fc8f07317a80ade4fbacc38073fb166f, type: 2}
     amount: 5

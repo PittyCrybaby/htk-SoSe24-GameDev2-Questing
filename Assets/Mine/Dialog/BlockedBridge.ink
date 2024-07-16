@@ -19,14 +19,14 @@ Hello Yonder!# speaker: Redd Happy
                             *******[Continue]
                                 I'd need new material to patch it up first...# speaker: Yonder Happy
                                 ********[Continue]
-                            I'd also need to assess the situation of the tree and the best way to chop it down.# speaker: Yonder Happy
-                                ********* "Help with material?"
-                                -> HelpWithMaterial
+                                    I'd also need to assess the situation of the tree and the best way to chop it down.# speaker: Yonder Happy
+                                    ********* "Help with material?"
+                                            -> HelpWithMaterial
                             
                             
-                                ********* "I gathered the material!"
-                                    {completable_GatherMaterial} {completable_BlockedBridge}
-                                -> HandOverMaterial
+                                    ********* "I gathered the material!"
+                                            -> HandOverMaterial
+                                            {completable_GatherMaterial} {completable_BlockedBridge}
 
 === HelpWithMaterial
 #addQuest GatherMaterial
@@ -45,6 +45,6 @@ Alright! I'll be back soon!
 
 === HandOverMaterial
 # removeQuest GatherMaterial
-# speaker: Yonder Happy
-"Alright, I already assessed the situation as well, let me just take care of the axe and the tree is as good as gone!"
+Alright, I already assessed the situation as well, let me just take care of the axe and the tree is as good as gone!# speaker: Yonder Happy
+
 -> END
