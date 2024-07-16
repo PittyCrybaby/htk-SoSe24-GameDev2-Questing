@@ -840,10 +840,16 @@ MonoBehaviour:
   speakerImage: {fileID: 1936818267}
   speakerConfigs:
   - name: Redd
-    sprite: {fileID: 21300000, guid: adaa85eeeebe05a4888ceb136cfcf969, type: 3}
-    emotion: Sad
+    sprite: {fileID: 21300000, guid: 4e74d08073a1127459ec954ac1ee2083, type: 3}
+    emotion: Happy
+  - name: Redd
+    sprite: {fileID: 21300000, guid: 62539abe42e4ee9448e23f88b679d79b, type: 3}
+    emotion: Curious
+  - name: Redd
+    sprite: {fileID: 21300000, guid: 967b01fdd4a76a744bca7475579361da, type: 3}
+    emotion: Annoyed
   - name: Yonder
-    sprite: {fileID: 21300000, guid: adaa85eeeebe05a4888ceb136cfcf969, type: 3}
+    sprite: {fileID: 21300000, guid: 178735bd45b51504886e27801acb2e5d, type: 3}
     emotion: Happy
   - name: Dante
     sprite: {fileID: 21300000, guid: adaa85eeeebe05a4888ceb136cfcf969, type: 3}
