@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class InteractToRemove : MonoBehaviour, IInteractable
 {
-    [Serializefield] private GameObject _deleteThisGameObject;
-    
-    
-    
+    [SerializeField] private GameObject _deleteThisGameObject;
+    public bool CanBeDeleted; 
+
+    public void Interact()
+    {
+        if (CanBeDeleted)
+        {
+            Destroy(_deleteThisGameObject);   
+        }
+    }
 }
