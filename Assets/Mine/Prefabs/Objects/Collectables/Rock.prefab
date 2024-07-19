@@ -98,8 +98,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a274a37edd84762bce7b79b8d97a9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: {fileID: 0}
-  amount: 1
+  _type: {fileID: 11400000, guid: 1a05f009c5cbf0f43988730faf0bf34c, type: 2}
+  _amount: 1
+  _onCollect:
+    m_PersistentCalls:
+      m_Calls: []
+  _trowStory: 0
+  _story: {fileID: 0}
+  _playerAnimationTrigger: PickUp
+  _wait: 0
 --- !u!114 &4277003479808143494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,7 +140,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

@@ -137,5 +137,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a274a37edd84762bce7b79b8d97a9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: {fileID: 11400000, guid: 87b641c553af20647bbbbbcda2120063, type: 2}
-  amount: 1
+  _type: {fileID: 11400000, guid: 87b641c553af20647bbbbbcda2120063, type: 2}
+  _amount: 1
+  _onCollect:
+    m_PersistentCalls:
+      m_Calls: []
+  _trowStory: 0
+  _story: {fileID: 0}
+  _playerAnimationTrigger: PickUp
+  _wait: 2
