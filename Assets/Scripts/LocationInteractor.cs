@@ -1,11 +1,10 @@
-using JetBrains.Annotations;
+using QuickOutline;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 public class LocationInteractor : MonoBehaviour
 {
-    [CanBeNull] private IInteractable _currentInteractable;
+    private Interactable _currentInteractable;
     private PlayerInput _playerInput;
 
     private void Awake()
@@ -15,16 +14,21 @@ public class LocationInteractor : MonoBehaviour
 
     private void Update()
     {
-        if (_playerInput.actions["Interact"].WasPressedThisFrame())
+        if (_currentInteractable != null)
         {
-            _currentInteractable?.Interact();
+            if (_playerInput.actions["Interact"].WasPressedThisFrame())
+            {
+                _currentInteractable?.Interact();
+            }
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<IInteractable>(out var interactable))
+        Debug.Log("entered");
+        if (other.TryGetComponent<Interactable>(out var interactable))
         {
+            Debug.Log("entered interactable");
             _currentInteractable = interactable;
         }
         
@@ -36,10 +40,12 @@ public class LocationInteractor : MonoBehaviour
     
     private void OnTriggerExit(Collider other)
     {
-        if (other.TryGetComponent<IInteractable>(out var interactable))
+        Debug.Log("entered");
+        if (other.TryGetComponent<Interactable>(out var interactable))
         {
             if (_currentInteractable == interactable)
             {
+                Debug.Log("entered interactable");
                 _currentInteractable = null;
             }
         }

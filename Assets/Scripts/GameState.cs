@@ -2,11 +2,12 @@ using System.Collections.Generic;
 using System.Linq;
 using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class GameState : MonoBehaviour
 {
-    private readonly Dictionary<ItemType, uint> _items = new();
-    private readonly List<QuestState> _questStates = new();
+    private Dictionary<ItemType, uint> _items = new();
+    private List<QuestState> _questStates = new();
 
     public static void AddItem(ItemType type, uint amount)
     {
@@ -114,6 +115,24 @@ public class GameState : MonoBehaviour
             Instantiate(uiPrefab, root);
         }
 
+        var playable = match.Quest.GetCompletePlayable();
+        if (playable != null)
+        {
+            var director =  FindObjectOfType<PlayableDirector>();
+            director.playableAsset = playable;
+            director.Play();
+        }
+        
+        var lockedGameObjects = FindObjectsOfType<LockedByQuest>(true);
+        foreach (var lockedObject in lockedGameObjects)
+        {
+            if (lockedObject.Quest.GetId() == questId)
+            {
+                lockedObject.gameObject.SetActive(true);
+                Destroy(lockedObject);
+            }
+        }
+
         Debug.Log("Quest " + questId + " completed");
     }
 
@@ -121,6 +140,11 @@ public class GameState : MonoBehaviour
     {
         var instance = FindObjectOfType<GameState>();
         var match = instance._questStates.Find(q => q.Quest.GetId() == quest.GetId());
+        if (match.Status == QuestStatus.Completed)
+        {
+            return;
+        }
+
         match.Status = QuestStatus.Completable;
         var index = instance._questStates.FindIndex(q => q.Quest.GetId() == quest.GetId());
         if (index >= 0 && index < instance._questStates.Count)

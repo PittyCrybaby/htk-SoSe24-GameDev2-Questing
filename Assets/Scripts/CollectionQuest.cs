@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
-using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.UI;
 
 [CreateAssetMenu]
 public class CollectionQuest : ScriptableObject, IQuest
@@ -9,8 +10,9 @@ public class CollectionQuest : ScriptableObject, IQuest
     public string displayName;
     public List<ItemRequirement> requirements;
     public bool isHidden;
-    public GameObject completeScreenPrefab; //this is null by default. Opitonally: a screen
-
+    public GameObject completeScreenPrefab; // this is null by default. Optionally: a screen
+    public PlayableAsset completePlayable;
+    
     public string GetId()
     {
         return name;
@@ -29,6 +31,11 @@ public class CollectionQuest : ScriptableObject, IQuest
     public GameObject GetCompleteScreenPrefab()
     {
         return completeScreenPrefab;
+    }
+
+    public PlayableAsset GetCompletePlayable()
+    {
+        return completePlayable;
     }
 
     [Serializable]

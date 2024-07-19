@@ -4,32 +4,42 @@ using System.Collections.Generic;
 using System.Linq;
 using DefaultNamespace;
 using DG.Tweening;
+using FMODUnity;
 using Ink.Runtime;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using Ink.UnityIntegration;
 
 public class StoryView : MonoBehaviour
 {
+    /*
+    [Header("Global Ink File")]
+    [SerializeField] private InkFile _globalsInkFile;
+    */
+    [Space]
+    [Header("Dialog")]
     [SerializeField] private RectTransform choiceHolder;
     [SerializeField] private TextMeshProUGUI storyText;
     [SerializeField] private TextMeshProUGUI speakerName;
     [SerializeField] private Button buttonPrefab;
     [SerializeField] private GameObject normalHudGroup;
     [SerializeField] private Image speakerImage;
-
+    [SerializeField] private GameObject _Melody;
     [SerializeField] private List<SpeakerConfig> speakerConfigs;
-
-    private UnityAction _onFinished;
+    
+    private DialogueVariables _dialogueVariables;
+    
+    //private UnityAction _onFinished; (53, 99, StoryNPC)
 
     [Serializable]
     public class SpeakerConfig
     {
         public string name;
-        public Sprite sprite;
         public string emotion;
+        public Sprite sprite;
     }
 
     private Story story;
@@ -48,15 +58,22 @@ public class StoryView : MonoBehaviour
         {
             _quests.Add(collectionQuest);
         }
+
+        //_dialogueVariables = new DialogueVariables(_globalsInkFile.filePath);
     }
 
-    public void StartStory(TextAsset textAsset, UnityAction onFinished)
+    public void StartStory(TextAsset textAsset)
     {
-        _onFinished = onFinished;
+        //UnityAction onFinished (Argument)
+        //_onFinished = onFinished;
+        //_Melody.GetComponent<StudioEventEmitter>().SetParameter("Dialog", 1);
         normalHudGroup.SetActive(false);
         _playerInput.currentActionMap = _playerInput.actions.FindActionMap("UI");
+        _playerInput.actions.Disable();
         gameObject.SetActive(true);
         story = new Story(textAsset.text);
+        
+        _dialogueVariables.StartListening(story);
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
@@ -93,12 +110,15 @@ public class StoryView : MonoBehaviour
 
     private void CloseStory()
     {
+        //_Melody.GetComponent<StudioEventEmitter>().SetParameter("Dialog", 0);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         gameObject.SetActive(false);
         normalHudGroup.SetActive(true);
-        FindObjectOfType<PlayerInput>().currentActionMap = _playerInput.actions.FindActionMap("Player");
-        _onFinished?.Invoke();
+        _playerInput.currentActionMap = _playerInput.actions.FindActionMap("Player");
+        //_onFinished?.Invoke();
+        
+        _dialogueVariables.StopListeting(story);
     }
 
     private void ShowStory()
@@ -128,8 +148,11 @@ public class StoryView : MonoBehaviour
         }
         else
         {
+            /*
             Button choice = CreateChoiceView("Continue", 0);
             choice.onClick.AddListener(CloseStory);
+            */
+            CloseStory();
         }
     }
 
@@ -145,7 +168,7 @@ public class StoryView : MonoBehaviour
             if (currentTag.Contains("addQuest"))
             {
                 var questName = currentTag.Split(' ')[1];
-                var quest = _quests.First(q => q.GetId().ToLower() == questName.ToLower());
+                var quest = _quests.First(q => string.Equals(q.GetId(), questName, StringComparison.OrdinalIgnoreCase));
                 GameState.StartQuest(quest);
                 FindObjectOfType<QuestLogView>(true).ShowActiveQuests();
             }

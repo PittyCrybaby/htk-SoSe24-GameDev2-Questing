@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NormalUIView : MonoBehaviour
+public class NormalUiView : MonoBehaviour
 {
     [SerializeField] private PauseMenu pauseScreen;
 
@@ -8,7 +8,11 @@ public class NormalUIView : MonoBehaviour
     {
         if (Input.GetButtonDown("Menu") && Time.timeScale > 0)
         {
-            Pause();
+            var storyView = FindObjectOfType<StoryView>(true);
+            if (!storyView.isActiveAndEnabled)
+            {
+                Pause();
+            }
         }
     }
 
