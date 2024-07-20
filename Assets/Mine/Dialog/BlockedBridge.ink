@@ -1,7 +1,7 @@
+INCLUDE logsintheway.ink
 VAR completable_gathermaterial = false
 ->Dialog_Start_Yonder
 ===Dialog_Start_Yonder
-#removeQuest talktoyonderthesquirrle
 Hello Yonder! #speaker Redd Happy
     *[Continue]
         Oh, hey there lil' Redd! How are you? You look a little distraught. #speaker Yonder Happy
