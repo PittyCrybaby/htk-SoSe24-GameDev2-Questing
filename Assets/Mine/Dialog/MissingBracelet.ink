@@ -1,7 +1,7 @@
 INCLUDE uehiu.ink
 VAR completable_missingbracelet = false
--> DialogStart
-=== DialogStart===
+-> Dialog_Start_Monolog_Part1
+=== Dialog_Start_Monolog_Part1===
 Hmh? #speaker Redd Happy
     *[Continue]
         Huh?! #speaker Redd Happy

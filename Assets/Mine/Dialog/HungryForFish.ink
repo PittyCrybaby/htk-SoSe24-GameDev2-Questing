@@ -1,79 +1,59 @@
-#addQuest HungryForFish
-VAR completable_HungryForFish = false
-VAR completable_CollectFish = false
-
-# speaker: Dante
-Sorrrrry, Redd~
-You'd need to pay a fee to get through here~
-
-# speaker: Redd
-Dante! I don't have time for your games, I need to get my braclet back.
-
-# speaker: Dante
-Hey, I'm not making the rules...
-(Although, I do.)
-Pay the fee or no pass~
-
-# speaker Redd
-* "Fee?"
--> CollectFish
-
-*"I have the fish."
--> HungryForFish
-{completable_CollectFish}
-{completable_HungryForFish}
-
-=== CollectFish===
-#addQuest CollectFish
-Urgh- What is the fee?
-
-# speaker Dante
-Well, I'm quite hungry but I don't want to get my paws dirty.
-I could go for a nice fish, I saw Mango leaving a bucket full of them near the lake earlier, maybe you could help yourself there~
-
-# speaker Redd
-You're unbelievable...
+VAR completable_hungryforfish = false
+-> Dialog_Start_Dante
+=== Dialog_Start_Dante ===
+Sorrrrry, Redd~ #speaker Dante Smug
+*[Continue]
+        You'd need to pay a fee to get through here~ #speaker Dante Smug
+        **[Continue]
+            Dante! I don't have time for your games, I need to get my bracelet back. #speaker Redd Annoyed
+            ***[Continue]
+                    Hey, I'm not making the rules... #speaker Dante Smug
+                    ****[Continue]
+                        (Although, I do.) #speaker Dante Smug
+                        *****[Continue]
+                        Pay the fee or no pass~ #speaker Dante Smug
+                            ****** [Fee?]
+                            -> CollectFish
+                            
+                            ******[I got what you need.]
+                            -> HandOverFish
+                            {completable_hungryforfish}
 -> END
 
-=== HungryForFish ===
-#removeQuest HungryForFish
-removeQuest HungryForFish
+=== CollectFish ===
+#addQuest hungryforfish
+Urgh- What is the fee? #speaker Redd Annoyed
+*[Continue]
+    Well, I'm quite hungry but I don't want to get my paws dirty. #speaker Dante Smug
+    **[Continue]
+        I could go for a nice fish, I saw Mango leaving a bucket full of them near the lake earlier, maybe you could help yourself there~ #speaker Dante Smug
+        ***[Continue]
+                You're unbelievable... #speaker Redd Annoyed
+                -> END
 
-# speaker Redd
-I got the fish you asked for.
-
-# speaker Dante
-Ohhhh! Wonderful~
-
-# speaker Redd
-You should tell Mango that you took one of his fish.
-
-# speaker Dante
-Yes, you're right.
-I'll invite him for dinner.
-
-# speaker Redd
-Sushi?
-
-# speaker Dante
-Sushi.
-
-# speaker Redd
-Well, can I pass then?
-
-# speaker Dante
-Hmmmh...
-
-# speaker Redd
-Dante!
-
-# speaker Dante
-Alright, yes!
-You're allowed to pass~
-Don't get your fur twisted!~
-
-# speaker Redd
-Thanks, I'll see you around.
--> END
-
-
+=== HandOverFish ===
+#removeQuest hungryforfish
+I got the fish you asked for. # speaker Redd Annoyed
+*[Continue]
+    Ohhhh! Wonderful~ # speaker Dante Smug
+    **[Continue]
+        You should tell Mango that you took one of his fish. # speaker Redd Annoyed
+        ***[Continue]
+            Ah... yes, you're right. I'll invite him for dinner. # speaker Dante Smug
+            ****[Continue]
+                Sushi? # speaker Redd Annoyed
+                *****[Continue]
+                    Sushi. # speaker Dante Smug
+                    ******[Continue]
+                        Well, can I pass then? # speaker Redd Annoyed
+                        *******[Continue]
+                            Hmmmh... # speaker Dante Smug
+                            ********[Continue]
+                                Dante! # speaker Redd Annoyed
+                                *********[Continue]
+                                    Alright, yes! # speaker Dante Smug
+                                    **********[Continue]
+                                        You're allowed to pass, don't get your fur in a twist!~ # speaker Dante Smug
+                                        ***********[Continue]
+                                            Thanks, I'll see you around. # speaker Redd Happy
+                                            -> END
