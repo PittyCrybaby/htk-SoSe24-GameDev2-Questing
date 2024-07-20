@@ -15,10 +15,9 @@ using Ink.UnityIntegration;
 
 public class StoryView : MonoBehaviour
 {
-    /*
+    
     [Header("Global Ink File")]
     [SerializeField] private InkFile _globalsInkFile;
-    */
     [Space]
     [Header("Dialog")]
     [SerializeField] private RectTransform choiceHolder;
@@ -59,7 +58,7 @@ public class StoryView : MonoBehaviour
             _quests.Add(collectionQuest);
         }
 
-        //_dialogueVariables = new DialogueVariables(_globalsInkFile.filePath);
+        _dialogueVariables = new DialogueVariables(_globalsInkFile.filePath);
     }
 
     public void StartStory(TextAsset textAsset)

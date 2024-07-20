@@ -1,7 +1,7 @@
-VAR completable_MissingBracelet = false
+INCLUDE uehiu.ink
+VAR completable_missingbracelet = false
 -> DialogStart
 === DialogStart===
-#addQuest missingbracelet
 Hmh? #speaker Redd Happy
     *[Continue]
         Huh?! #speaker Redd Happy
@@ -14,5 +14,6 @@ Hmh? #speaker Redd Happy
                         *****[Continue]
                         Maybe I forgot it there... #speaker Redd Happy
                             ******[Continue]
+                            #addQuest missingbracelet
                             Silly me, I should look for it then! #speaker Redd Happy
 -> END
