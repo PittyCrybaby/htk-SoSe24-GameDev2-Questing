@@ -78,7 +78,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e6dbb36422ca30747b34409b1eb84e15,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4949688623297914385}
+      addedObject: {fileID: -3758581332414405312}
   m_SourcePrefab: {fileID: 100100000, guid: e6dbb36422ca30747b34409b1eb84e15, type: 3}
 --- !u!1 &4467358078122759146 stripped
 GameObject:
@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineMode: 1
+  outlineColor: {r: 1, g: 0.759434, b: 0.759434, a: 1}
   outlineWidth: 2
   precomputeOutline: 0
   bakeKeys: []
@@ -119,13 +119,13 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.3
   m_Center: {x: 0.0007626489, y: 0.056499198, z: 0.0012121871}
---- !u!114 &4949688623297914385
+--- !u!114 &-3758581332414405312
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,15 +134,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4467358078122759146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88a274a37edd84762bce7b79b8d97a9f, type: 3}
+  m_Script: {fileID: 11500000, guid: b8f978daa714f0947bcc78347a661dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _type: {fileID: 11400000, guid: 87b641c553af20647bbbbbcda2120063, type: 2}
-  _amount: 1
-  _onCollect:
-    m_PersistentCalls:
-      m_Calls: []
-  _trowStory: 0
-  _story: {fileID: 0}
-  _playerAnimationTrigger: PickUp
-  _wait: 2
+  story: {fileID: 0}
+  _IsStoryRepeatable: 0
+  _TriggerAnimateOnEnter: 1
+  _PlayerAnimationTrigger: PickUp
+  _DestoyStoryOnExit: 0
+  _DestoyThisObject: {fileID: 0}

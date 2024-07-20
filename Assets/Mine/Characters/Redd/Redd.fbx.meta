@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 585c14d90cc4c70488bd18d1c436c0ea
+guid: 79102ea83cd165542892a2b510f19852
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -33,18 +33,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle Animation
-      takeName: Idle Animation
-      internalID: -9069761840371977854
+      name: Pick Up 0-100
+      takeName: Pick Up 0-100
+      internalID: 4451782630322794060
       firstFrame: 0
-      lastFrame: 199
+      lastFrame: 99
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -62,18 +62,18 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Walk Animation
-      takeName: Walk Animation
-      internalID: 7697926295222225405
+      name: Idle 0-128
+      takeName: Idle 0-128
+      internalID: 3440949042143049206
       firstFrame: 0
-      lastFrame: 56
+      lastFrame: 127
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -91,11 +91,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Pick Up
-      takeName: Pick Up
-      internalID: 5295051696004554337
+      name: Walk 0-75
+      takeName: Walk 0-75
+      internalID: -4771056264365057803
       firstFrame: 0
-      lastFrame: 92
+      lastFrame: 75
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
