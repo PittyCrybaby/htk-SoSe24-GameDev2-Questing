@@ -71,6 +71,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7649950305606958548}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 177ad9f7b172ff14e929d279e4c7a358,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1901379961650503230}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 177ad9f7b172ff14e929d279e4c7a358,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1684472699510318752}
   m_SourcePrefab: {fileID: 100100000, guid: 177ad9f7b172ff14e929d279e4c7a358, type: 3}
 --- !u!1 &3455266985265263589 stripped
 GameObject:
@@ -100,3 +108,55 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 7674281718561451967, guid: 177ad9f7b172ff14e929d279e4c7a358, type: 3}
+--- !u!114 &1901379961650503230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3455266985265263589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  EventReference:
+    Guid:
+      Data1: 888155555
+      Data2: 1250769886
+      Data3: 128588728
+      Data4: -487322026
+    Path: event:/Fountain
+  Event: 
+  PlayEvent: 3
+  StopEvent: 4
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!135 &1684472699510318752
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3455266985265263589}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 9.68
+  m_Center: {x: 0.000019550323, y: -0.55, z: -0.015708148}

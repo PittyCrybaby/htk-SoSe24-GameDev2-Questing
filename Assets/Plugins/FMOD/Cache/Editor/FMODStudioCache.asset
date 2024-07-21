@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Fmod/HTK_SoSe24/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638545869837887365
+  lastModified: 638571887784308294
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -35,11 +35,159 @@ MonoBehaviour:
   Path: Fmod/HTK_SoSe24/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638545869838286301
+  lastModified: 638571887784348176
   FileSizes:
   - Name: Desktop
-    Value: 712
+    Value: 1134
   Exists: 1
+--- !u!114 &-6928650948772731433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Melody.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod/HTK_SoSe24/Build/Desktop/Melody.bank
+  Name: Melody
+  StudioPath: bank:/Melody
+  lastModified: 638571887860113736
+  FileSizes:
+  - Name: Desktop
+    Value: 1197792
+  Exists: 1
+--- !u!114 &-6732540040128806225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Footsteps
+  Guid:
+    Data1: 835769515
+    Data2: 1089574804
+    Data3: -840693588
+    Data4: 1382351717
+  Banks:
+  - {fileID: 2747984140112750718}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4007
+--- !u!114 &-6046450246211568395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Fountain
+  m_EditorClassIdentifier: 
+  Path: event:/Fountain
+  Guid:
+    Data1: 888155555
+    Data2: 1250769886
+    Data3: 128588728
+    Data4: -487322026
+  Banks:
+  - {fileID: 2747984140112750718}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 47709
+--- !u!114 &-5223491000919409269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music
+  Guid:
+    Data1: 451736203
+    Data2: 1122437162
+    Data3: 603809926
+    Data4: 17798315
+  Banks:
+  - {fileID: -6928650948772731433}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 134000
+--- !u!114 &-5012468510931218273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Atmo.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod/HTK_SoSe24/Build/Desktop/Atmo.bank
+  Name: Atmo
+  StudioPath: bank:/Atmo
+  lastModified: 638571887916512374
+  FileSizes:
+  - Name: Desktop
+    Value: 1814336
+  Exists: 1
+--- !u!114 &-1432071595605777554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Hover
+  m_EditorClassIdentifier: 
+  Path: event:/Hover
+  Guid:
+    Data1: 2040358810
+    Data2: 1202598818
+    Data3: 1200018594
+    Data4: 324403954
+  Banks:
+  - {fileID: 2747984140112750718}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 65
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,11 +203,122 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: -8238535913308681073}
   - {fileID: -8622322475859369242}
-  EditorEvents: []
+  - {fileID: -5012468510931218273}
+  - {fileID: -6928650948772731433}
+  - {fileID: 2747984140112750718}
+  EditorEvents:
+  - {fileID: 3784449951098251081}
+  - {fileID: -5223491000919409269}
+  - {fileID: 1402819721423326135}
+  - {fileID: 4688725672295084028}
+  - {fileID: -1432071595605777554}
+  - {fileID: -6046450246211568395}
+  - {fileID: -6732540040128806225}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8622322475859369242}
   StringsBanks:
   - {fileID: -8238535913308681073}
-  cacheTime: 638545869838286301
+  cacheTime: 638571887916512374
   cacheVersion: 131618
+--- !u!114 &1402819721423326135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sliding Door
+  m_EditorClassIdentifier: 
+  Path: event:/Sliding Door
+  Guid:
+    Data1: 1632860963
+    Data2: 1297361276
+    Data3: -494896718
+    Data4: -1339963534
+  Banks:
+  - {fileID: 2747984140112750718}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2732
+--- !u!114 &2747984140112750718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod/HTK_SoSe24/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638571887804919703
+  FileSizes:
+  - Name: Desktop
+    Value: 521216
+  Exists: 1
+--- !u!114 &3784449951098251081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Atmo
+  m_EditorClassIdentifier: 
+  Path: event:/Atmo
+  Guid:
+    Data1: -1631960059
+    Data2: 1164997794
+    Data3: -2090487142
+    Data4: 559064757
+  Banks:
+  - {fileID: -5012468510931218273}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 134018
+--- !u!114 &4688725672295084028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Click
+  m_EditorClassIdentifier: 
+  Path: event:/Click
+  Guid:
+    Data1: -111572922
+    Data2: 1089518654
+    Data3: -1448566626
+    Data4: 1591586803
+  Banks:
+  - {fileID: 2747984140112750718}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 194
