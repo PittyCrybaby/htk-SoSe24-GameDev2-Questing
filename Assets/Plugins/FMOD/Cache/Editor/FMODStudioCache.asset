@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: Fmod/HTK_SoSe24/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638571887784308294
+  lastModified: 638571964148933191
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 2038
   Exists: 1
 --- !u!114 &-8238535913308681073
 MonoBehaviour:
@@ -35,10 +35,10 @@ MonoBehaviour:
   Path: Fmod/HTK_SoSe24/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638571887784348176
+  lastModified: 638571964148958277
   FileSizes:
   - Name: Desktop
-    Value: 1134
+    Value: 1410
   Exists: 1
 --- !u!114 &-6928650948772731433
 MonoBehaviour:
@@ -55,7 +55,7 @@ MonoBehaviour:
   Path: Fmod/HTK_SoSe24/Build/Desktop/Melody.bank
   Name: Melody
   StudioPath: bank:/Melody
-  lastModified: 638571887860113736
+  lastModified: 638571964149816625
   FileSizes:
   - Name: Desktop
     Value: 1197792
@@ -156,7 +156,7 @@ MonoBehaviour:
   Path: Fmod/HTK_SoSe24/Build/Desktop/Atmo.bank
   Name: Atmo
   StudioPath: bank:/Atmo
-  lastModified: 638571887916512374
+  lastModified: 638571964148803561
   FileSizes:
   - Name: Desktop
     Value: 1814336
@@ -219,7 +219,7 @@ MonoBehaviour:
   - {fileID: -8622322475859369242}
   StringsBanks:
   - {fileID: -8238535913308681073}
-  cacheTime: 638571887916512374
+  cacheTime: 638571964150445367
   cacheVersion: 131618
 --- !u!114 &1402819721423326135
 MonoBehaviour:
@@ -263,7 +263,7 @@ MonoBehaviour:
   Path: Fmod/HTK_SoSe24/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638571887804919703
+  lastModified: 638571964150445367
   FileSizes:
   - Name: Desktop
     Value: 521216

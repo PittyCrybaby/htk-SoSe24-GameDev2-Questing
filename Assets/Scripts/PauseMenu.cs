@@ -1,5 +1,7 @@
 ﻿using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
@@ -22,6 +24,10 @@ public class PauseMenu : MonoBehaviour
         {
             Continue();
         }
+        if (EventSystem.current.currentSelectedGameObject == null)
+        {
+            continueButton.Select();
+        }
     }
 
     private void Pause()
@@ -29,6 +35,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        FindObjectOfType<PlayerInput>().enabled = false;
     }
 
     private void Continue()
@@ -37,6 +44,7 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Destroy(gameObject);
+        FindObjectOfType<PlayerInput>().enabled = true;
     }
     
     private void OpenOptions()
