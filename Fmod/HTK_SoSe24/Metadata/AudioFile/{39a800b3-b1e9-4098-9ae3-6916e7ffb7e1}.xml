@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{39a800b3-b1e9-4098-9ae3-6916e7ffb7e1}">
+		<property name="assetPath">
+			<value>Render/ENVIORMENT/Atmo/RTOF_Audio_Atmo.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>134.01836734693879</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{61014a8f-62c9-4014-8446-fd721587bc59}</destination>
+		</relationship>
+	</object>
+</objects>

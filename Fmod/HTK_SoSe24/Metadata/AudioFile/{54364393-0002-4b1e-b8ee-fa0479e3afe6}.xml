@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{54364393-0002-4b1e-b8ee-fa0479e3afe6}">
+		<property name="assetPath">
+			<value>Render/SFX/RTOF_Audio_Splash.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>47.709637188208617</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{61014a8f-62c9-4014-8446-fd721587bc59}</destination>
+		</relationship>
+	</object>
+</objects>
