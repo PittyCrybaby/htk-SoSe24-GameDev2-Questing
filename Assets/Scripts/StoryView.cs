@@ -11,7 +11,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-using Ink.UnityIntegration;
 
 public class StoryView : MonoBehaviour
 {
