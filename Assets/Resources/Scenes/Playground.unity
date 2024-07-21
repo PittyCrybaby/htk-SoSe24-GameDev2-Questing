@@ -54602,7 +54602,7 @@ MonoBehaviour:
   _trowStory: 0
   _story: {fileID: 0}
   _playerAnimationTrigger: PickUp
-  _wait: 2
+  _wait: 1
 --- !u!135 &1765150140
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -54622,8 +54622,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 15
-  m_Center: {x: -0.77208483, y: 0.07329992, z: 0.0009499192}
+  m_Radius: 19.17
+  m_Center: {x: -0.7, y: 2.35, z: 0.0009499192}
 --- !u!1001 &1768774866
 PrefabInstance:
   m_ObjectHideFlags: 0
