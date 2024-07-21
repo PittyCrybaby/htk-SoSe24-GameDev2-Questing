@@ -29,10 +29,10 @@ Urgh- What is the fee? #speaker Redd Annoyed
         I could go for a nice fish, I saw Mango leaving a bucket full of them near the lake earlier.
             ***[Continue]
                 Maybe you could help yourself there~ #speaker Dante Smug
-                    ****[Continue]
-                        You're unbelievable... #speaker Redd Annoyed
-                        *****[Look for the fish]
-                            -> END
+                ****[Continue]
+                    You're unbelievable... #speaker Redd Annoyed
+                    *****[Look for the fish]
+                        -> END
 
 === HandOverFish ===
 #completeQuest hungryforfish
@@ -57,7 +57,7 @@ I got the fish you asked for. # speaker Redd Annoyed
                                     Alright, yes! # speaker Dante Smug
                                     **********[Continue]
                                         You're allowed to pass, don't get your fur in a twist!~ # speaker Dante Smug
-                                            ***********[Continue]
-                                                Thanks, I'll see you around. # speaker Redd Happy
-                                                ************[Climb the mountain]
-                                                    -> END
+                                        ***********[Continue]
+                                            Thanks, I'll see you around. # speaker Redd Happy
+                                            ************[Climb the mountain!]
+                                                -> END
