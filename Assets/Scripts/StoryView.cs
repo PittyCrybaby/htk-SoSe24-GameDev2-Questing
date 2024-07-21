@@ -16,8 +16,8 @@ using Ink.UnityIntegration;
 public class StoryView : MonoBehaviour
 {
     
-    [Header("Global Ink File")]
-    [SerializeField] private InkFile _globalsInkFile;
+    //[Header("Global Ink File")]
+    //[SerializeField] private InkFile _globalsInkFile;
     [Space]
     [Header("Dialog")]
     [SerializeField] private RectTransform choiceHolder;
@@ -29,7 +29,7 @@ public class StoryView : MonoBehaviour
     [SerializeField] private GameObject _Melody;
     [SerializeField] private List<SpeakerConfig> speakerConfigs;
     
-    private DialogueVariables _dialogueVariables;
+    //private DialogueVariables _dialogueVariables;
     
     //private UnityAction _onFinished; (53, 99, StoryNPC)
 
@@ -58,7 +58,7 @@ public class StoryView : MonoBehaviour
             _quests.Add(collectionQuest);
         }
 
-        _dialogueVariables = new DialogueVariables(_globalsInkFile.filePath);
+        //_dialogueVariables = new DialogueVariables(_globalsInkFile.filePath);
     }
 
     public void StartStory(TextAsset textAsset)
@@ -72,7 +72,7 @@ public class StoryView : MonoBehaviour
         gameObject.SetActive(true);
         story = new Story(textAsset.text);
         
-        _dialogueVariables.StartListening(story);
+        //_dialogueVariables.StartListening(story);
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
@@ -117,7 +117,7 @@ public class StoryView : MonoBehaviour
         _playerInput.currentActionMap = _playerInput.actions.FindActionMap("Player");
         //_onFinished?.Invoke();
         
-        _dialogueVariables.StopListeting(story);
+        //_dialogueVariables.StopListeting(story);
     }
 
     private void ShowStory()
