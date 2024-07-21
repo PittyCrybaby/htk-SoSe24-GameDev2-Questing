@@ -16,12 +16,16 @@ public class StartStoryOnCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("1");
         if (other.CompareTag("Player"))
         {
+            Debug.Log("2");
             if (!_IsStoryRepeatable)
             {
+                Debug.Log("3");
                 if (!_triggered)
                 {
+                    Debug.Log("4");
                     if (_TriggerAnimateOnEnter)
                     {
                         FindObjectOfType<ThirdPersonController>().GetComponent<Animator>().SetTrigger(_PlayerAnimationTrigger);
